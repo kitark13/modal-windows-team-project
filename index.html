@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="backdrop">
+      <div class="contact-modal">
+        <button type="button" class="modal-close"></button>
+        <h3 class="contact-modal-title">Register</h3>
+        <p class="contact-modal-text">
+          Cozy Book Club — "The Midnight Library"
+        </p>
+        <form class="contact-modal-form">
+          <label for="user-name" class="modal-label">Name</label>
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            class="modal-input"
+            placeholder="Anna"
+          />
+          <label for="user-email" class="modal-label">Email</label>
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            class="modal-input"
+            placeholder="hello@booksy.com"
+          />
+          <label for="user-message" class="modal-label">Message</label>
+          <textarea
+            name="user-message"
+            id="user-message"
+            class="modal-input"
+            placeholder="Type your message..."
+          ></textarea>
+        </form>
+        <button type="submit" class="contact-submit-btn">Register</button>
+      </div>
+    </div>
+  </body>
+</html>
