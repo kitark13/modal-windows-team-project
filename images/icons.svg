@@ -1,0 +1,7 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-modal-close-btn" viewBox="0 0 32 32">
+            <path d="M27.179 0.918l-11.315 11.312-11.312-11.312-3.771 3.771 11.312 11.312-11.312 11.312 3.771 3.771 11.312-11.312 11.315 11.312 3.771-3.771-11.312-11.312 11.312-11.312-3.771-3.771z"></path>
+        </symbol>
+    </defs>
+</svg>
