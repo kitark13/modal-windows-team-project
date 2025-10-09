@@ -216,7 +216,7 @@ ol {
   height: 100vh;
 }
 
-/* ----- Book Modal ----- */
+/* ----- Book Modal(375 px) ----- */
 
 .backdrop-book-modal {
   position: fixed;
@@ -329,6 +329,11 @@ ol {
   cursor: pointer;
 }
 
+.neg-book-btn:hover,
+.neg-book-btn:focus {
+  background-color: #ea8d50;
+}
+
 .quantity-book {
   width: 42px;
   height: 40px;
@@ -372,6 +377,11 @@ ol {
   cursor: pointer;
 }
 
+.add-book-btn:hover,
+.add-book-btn:focus {
+  background-color: #ea8d50;
+}
+
 .add-to-cart-btn {
   display: block;
   margin-bottom: 24px;
@@ -391,6 +401,11 @@ ol {
   cursor: pointer;
 }
 
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: #0b0500;
+}
+
 .buy-now-btn {
   display: block;
   background-color: transparent;
@@ -408,6 +423,11 @@ ol {
   color: #0b0500;
   margin-bottom: 32px;
   cursor: pointer;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: #ea8d50;
 }
 
 .book-modal-list {
@@ -456,7 +476,7 @@ ol {
 .accordion-container .ac .ac-header .ac-trigger::after {
   content: "";
   position: absolute;
-  left: 290px;
+  right: 10px;
   top: 50%;
   width: 14px;
   height: 14px;
@@ -505,6 +525,23 @@ ol {
   .contact-submit-btn {
     min-width: 342px;
   }
+
+  /* ----- Book Modal ----- */
+
+  .backdrop-book-modal {
+    padding: 191px 0;
+  }
+
+  .book-modal {
+    width: 704px;
+    padding: 64px 32px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .quantity {
+    margin-bottom: 24px;
+  }
 }
 
 /* ----- Laptop 1440 px ----- */
@@ -519,5 +556,33 @@ ol {
 
   .contact-modal-form {
     width: 738px;
+  }
+
+  /* ----- Book Modal ----- */
+
+  .backdrop-book-modal {
+    padding: 64px 0;
+  }
+
+  .book-modal {
+    width: 1300px;
+    padding: 64px;
+  }
+
+  .quantity {
+    margin-bottom: 16px;
+  }
+
+  .add-to-cart-btn {
+    margin: 0;
+  }
+  .buy-now-btn {
+    margin: 0;
+  }
+
+  .move-book-btns {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
   }
 }
