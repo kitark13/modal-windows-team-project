@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +22,7 @@
   </head>
   <body>
     <button class="open-contact-modal-btn">Open Modal Window</button>
-    <div class="backdrop-contact-modal window-is-invisible">
+    <!-- <div class="backdrop-contact-modal window-is-invisible">
       <div class="contact-modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-btn-icon" width="16" height="16">
@@ -29,7 +33,7 @@
         <p class="contact-modal-text">
           Cozy Book Club — "The Midnight Library"
         </p>
-        <form class="contact-modal-form">
+        <form action="#" class="contact-modal-form">
           <div class="contact-modal-field">
             <label for="user-name" class="modal-label">Name</label>
             <input
@@ -75,7 +79,109 @@
           <button type="submit" class="contact-submit-btn">Register</button>
         </form>
       </div>
+    </div> -->
+    <div class="backdrop-book-modal">
+      <div class="book-modal">
+        <button type="button" class="modal-close-btn">
+          <svg class="modal-close-btn-icon" width="16" height="16">
+            <use href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="book-container">
+          <img src="./images/book-image.jpg" alt="book" class="book-img" />
+          <h3 class="book-title">I will find you</h3>
+          <p class="book-author">Harlan Coben</p>
+          <p class="book-price">$15</p>
+        </div>
+        <form action="#" class="form-quantity">
+          <div class="quantity">
+            <button type="button" class="neg-book-btn">-</button>
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              value="1"
+              min="1"
+              class="quantity-book"
+            />
+            <button type="button" class="add-book-btn">+</button>
+          </div>
+          <button type="submit" class="add-to-cart-btn">Add To Cart</button>
+          <button type="submit" class="buy-now-btn">Buy Now</button>
+        </form>
+        <ul class="accordion-container book-modal-list">
+          <li class="ac book-modal-item">
+            <div class="ac-header">
+              <h4>
+                <button
+                  class="ac-trigger book-modal-title"
+                  aria-expanded="false"
+                >
+                  Details
+                </button>
+              </h4>
+            </div>
+            <div class="ac-panel">
+              <p class="book-modal-text">
+                I Will Find You is a gripping thriller by the master of
+                suspense, Harlan Coben. The story follows David Burroughs, a
+                former prisoner wrongfully convicted of murdering his own son.
+                When he discovers a clue suggesting his son might still be
+                alive, David escapes from prison to uncover the truth.
+                Fast-paced, emotional, and full of unexpected twists — this
+                novel will keep you hooked until the very last page.
+              </p>
+            </div>
+          </li>
+          <li class="ac book-modal-item">
+            <div class="ac-header">
+              <h4>
+                <button
+                  class="ac-trigger book-modal-title"
+                  aria-expanded="false"
+                >
+                  Shipping
+                </button>
+              </h4>
+            </div>
+            <div class="ac-panel">
+              <p class="book-modal-text">
+                We ship across the United States within 2-5 business days. All
+                orders are processed through USPS or a reliable courier service.
+                Enjoy free standard shipping on orders over $50.
+              </p>
+            </div>
+          </li>
+          <li class="ac book-modal-item">
+            <div class="ac-header">
+              <h4>
+                <button
+                  class="ac-trigger book-modal-title"
+                  aria-expanded="false"
+                >
+                  Returns
+                </button>
+              </h4>
+            </div>
+            <div class="ac-panel">
+              <p class="book-modal-text">
+                You can return an item within 14 days of receiving your order,
+                provided it hasn't been used and is in its original condition.
+                To start a return, please contact our support team — we'll guide
+                you through the process quickly and hassle-free.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+    <script src="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.js"></script>
+    <script>
+      new Accordion(".accordion-container", {
+        duration: 300,
+        showMultiple: true,
+      });
+    </script>
     <script type="module" src="./js/modal-windows.js"></script>
   </body>
 </html>
