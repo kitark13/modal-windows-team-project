@@ -25,11 +25,11 @@ const subtitleModal = document.querySelector(".contact-modal-text");
 //   openBtnContactModal();
 // });
 
-function openBtnContactModal() {
-  contactModal.classList.remove("window-is-invisible");
-  document.body.classList.add("not-scrolling-page");
-  document.addEventListener("keydown", onEscKeyPress);
-}
+// function openBtnContactModal() {
+//   contactModal.classList.remove("window-is-invisible");
+//   document.body.classList.add("not-scrolling-page");
+//   document.addEventListener("keydown", onEscKeyPress);
+// }
 
 openBtnContactModal.addEventListener("click", () => {
   contactModal.classList.remove("window-is-invisible");

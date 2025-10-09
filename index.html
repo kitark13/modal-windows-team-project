@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +46,7 @@
             <label for="user-name" class="modal-label">Name</label>
             <input
               type="text"
-              name="user-name"
+              name="name"
               id="user-name"
               class="modal-input"
               placeholder="Anna"
@@ -58,19 +62,18 @@
             <label for="user-email" class="modal-label">Email</label>
             <input
               type="email"
-              name="user-email"
+              name="email"
               id="user-email"
               class="modal-input"
               placeholder="hello@booksy.com"
               required
-              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             />
             <p class="text-invalid">Invalid email address format!</p>
           </div>
           <div class="contact-modal-field">
             <label for="user-message" class="modal-label">Message</label>
             <textarea
-              name="user-message"
+              name="message"
               id="user-message"
               class="modal-input modal-textarea"
               placeholder="Type your message..."
@@ -195,6 +198,34 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script>
+      const contactModalForm = document.querySelector(".contact-modal-form");
+      contactModalForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const userName = contactModalForm.elements.name.value.trim();
+        const userEmail = contactModalForm.elements.email.value.trim();
+        const userMessage = contactModalForm.elements.message.value.trim();
+
+        if (!userName || !userEmail) {
+          iziToast.error({
+            title: "Error",
+            message: "Please, fill in the Name and Email fields!",
+            position: "topRight",
+          });
+          return;
+        }
+
+        iziToast.success({
+          title: "Congratulations!",
+          message: "Data sent. Have a nice day)",
+          position: "topRight",
+        });
+
+        contactModalForm.reset();
+      });
+    </script>
     <script src="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.js"></script>
     <script>
       new Accordion(".accordion-container", {
