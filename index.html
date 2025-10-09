@@ -22,7 +22,11 @@
   </head>
   <body>
     <button class="open-contact-modal-btn">Open Modal Window</button>
-    <!-- <div class="backdrop-contact-modal window-is-invisible">
+    <button class="open-book-modal-btn">Open Book Window</button>
+
+    <!----- Contact Modal ----->
+
+    <div class="backdrop-contact-modal window-is-invisible">
       <div class="contact-modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-btn-icon" width="16" height="16">
@@ -79,21 +83,29 @@
           <button type="submit" class="contact-submit-btn">Register</button>
         </form>
       </div>
-    </div> -->
-    <div class="backdrop-book-modal">
+    </div>
+
+    <!----- Book Modal ----->
+
+    <div class="backdrop-book-modal window-is-invisible">
       <div class="book-modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="book-modal-close-btn">
           <svg class="modal-close-btn-icon" width="16" height="16">
             <use href="./images/sprite.svg#icon-cross"></use>
           </svg>
         </button>
         <img src="./images/book-image.jpg" alt="book" class="book-img" />
+
+        <!----- book container ----->
+
         <div class="book-container">
           <div class="book-modal-info">
             <h3 class="book-title">I will find you</h3>
             <p class="book-author">Harlan Coben</p>
             <p class="book-price">$15</p>
           </div>
+
+          <!----- form quantity book ----->
 
           <form action="#" class="form-quantity">
             <div class="quantity">
@@ -113,6 +125,8 @@
               <button type="submit" class="buy-now-btn">Buy Now</button>
             </div>
           </form>
+
+          <!----- accordion container book info ----->
 
           <ul class="accordion-container book-modal-list">
             <li class="ac book-modal-item">

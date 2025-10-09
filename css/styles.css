@@ -25,6 +25,13 @@ ol {
   cursor: pointer;
 }
 
+.open-book-modal-btn {
+  display: block;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
 /* ----- Contact Modal(375px) ----- */
 
 .backdrop-contact-modal {
@@ -233,6 +240,10 @@ ol {
   z-index: 9999;
 }
 
+.window-is-invisible {
+  display: none;
+}
+
 .book-modal {
   width: 343px;
   box-sizing: border-box;
@@ -243,7 +254,7 @@ ol {
   margin: 0;
 }
 
-.modal-close-btn {
+.book-modal-close-btn {
   background-color: transparent;
   border: none;
   width: 32px;
@@ -505,6 +516,11 @@ ol {
 
 .ac.is-active .ac-panel {
   padding-bottom: 28px;
+}
+
+.not-scrolling-page {
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* ----- Tablet 768 px ----- */
