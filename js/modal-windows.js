@@ -58,7 +58,7 @@ function onEscKeyPress(event) {
   }
 }
 
-/* ----- Contact Modal ----- */
+/* ----- Book Modal ----- */
 
 // open/close Book Modal
 
