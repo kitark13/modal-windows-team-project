@@ -27,7 +27,8 @@
   <body>
     <button class="open-contact-modal-btn">Open Modal Window</button>
     <button class="open-book-modal-btn">Open Book Window</button>
-
+    <button class="get-book-btn">Get Book</button>
+    <div class="book-info"></div>
     <!----- Contact Modal ----->
 
     <div class="backdrop-contact-modal window-is-invisible">
@@ -198,6 +199,54 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
+    <script>
+      const BASE_URL = "https://books-backend.p.goit.global/";
+      const getBookBtn = document.querySelector(".get-book-btn");
+      const bookInfo = document.querySelector(".book-info");
+
+      getBookBtn.addEventListener("click", async () => {
+        // const id = btn.dataset.bookId;
+        const id = "663c23c5a957e5c1ae3ecab0";
+        await fetchBookId(id);
+      });
+
+      async function fetchBookId(id) {
+        try {
+          const response = await axios.get(`${BASE_URL}books/${id}`);
+          const book = response.data;
+          const bookImg = book.book_image;
+          console.log(book);
+
+          renderBook(book);
+        } catch (error) {
+          console.error("Error while querying: ", error);
+        }
+      }
+
+      function renderBook(book) {
+        bookInfo.innerHTML = `
+        <img src="${book.book_image}" alt="${book.title}" width="309">
+        <h2>${book.title}</h2>
+        <p>${book.author}</p>
+        <p>$${book.price}</p>
+        <ul>
+          <li>
+            <h3>Details</h3>
+            <p></p>
+          </li>
+          <li>
+            <h3>Shipping</h3>
+            <p></p>
+          </li>
+          <li>
+            <h3>Returns</h3>
+            <p></p>
+          </li>
+        </ul>
+        `;
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
     <script>
       const contactModalForm = document.querySelector(".contact-modal-form");

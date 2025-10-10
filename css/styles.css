@@ -32,6 +32,13 @@ ol {
   cursor: pointer;
 }
 
+.get-book-btn {
+  display: block;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
 /* ----- Contact Modal(375px) ----- */
 
 .backdrop-contact-modal {
